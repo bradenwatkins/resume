@@ -12,7 +12,6 @@ const lightTheme = createMuiTheme({
 
 const darkTheme = createMuiTheme({
   palette: {
-    contrastText: '#fff',
     type: dark
   }
 });

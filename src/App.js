@@ -54,14 +54,12 @@ const Section = ({ section }) => (
 
 function App() {
   return (
-    <ThemeProvider theme={darkTheme}>
+    <ThemeProvider theme={lightTheme}>
       <CssBaseline />
       <div className={styles.Resume}>
         <Header header={resume.header} />
         <Summary summary={resume.summary} />
-        <Section section={resume.education} />
-        <Section section={resume.experience} />
-        <Section section={resume.service} />
+        {resume.sections.map(section => <Section key={section.title} section={section} />)}
       </div>
     </ThemeProvider>
   )
