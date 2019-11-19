@@ -1,0 +1,141 @@
+.Resume {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 95vw;
+  max-width: 1000px;
+  margin: auto;
+  padding: 32px 0;
+}
+
+.Header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: space-between;
+  margin: 16px;
+}
+
+.Title {
+  width: 400px;
+}
+
+.Section {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-top: 8px;
+  border-top: solid black 1px;
+}
+
+.SectionHeading {
+  display: flex;
+  align-items: center;
+  width: 150px;
+  flex-shrink: 0;
+}
+
+.SubSections {
+  display: flex;
+  flex-direction: column;
+}
+
+.SubSection {
+  display: flex;
+  flex-direction: column;
+  margin-top: 8px;
+}
+
+.SubSection li {
+  padding-bottom: 6px;
+}
+
+.Links {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.Link {
+  display: flex;
+  align-items: center;
+}
+
+.LinkLabel {
+  display: none;
+}
+
+.Icon {
+  font-size: 24px;
+  margin-left: 16px;
+}
+
+.Divider {
+  width: 100%;
+  margin: 8px 0;
+  border-top: 1px solid black;
+}
+
+@media screen and (max-width: 700px) {
+  .Header {
+    flex-direction: column;
+  }
+  .Title {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  .Links {
+    justify-content: space-evenly;
+  }
+  .Section {
+    flex-direction: column;
+  }
+  .SectionHeading {
+    width: 120px;
+    font-size: 24px;
+  }
+  .Icon {
+    margin: 0;
+  }
+}
+
+@media print {
+  @page {
+    margin: 1.5cm;
+  }
+  body {
+    background-color: initial;
+  }
+  .App {
+    padding: 0;
+  }
+  .Header {
+    flex-direction: column;
+    margin: 8px;
+  }
+  .Title {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  .Links {
+    justify-content: space-between;
+  }
+  .LinkLabel {
+    display: block;
+    text-transform: none;
+    font-size: 16px;
+  }
+  .Icon {
+    font-size: 16px;
+    margin: 0 16px 0 0;
+  }
+  .SubSection li {
+    font-size: 12px;
+    line-height: 16px;
+    padding-bottom: initial;
+  }
+}
